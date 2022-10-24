@@ -1,46 +1,73 @@
+@font-face {
+    font-family: 'Exo 2';
+    src: url(./fonts/Exo-2/Exo2-VariableFont_wght.ttf);
+}
+
+/*---WEBSITE LAYOUT STYLING---*/
+
 body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Exo 2';
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    margin: 0;
     background-image: url("./images/pc-full-background-image.jpg");
     background-size: cover;
     background-color: black;
 }
 
 .section {
-    display: flex;
     width: 40%;
     min-width: 430px;
-    border: 5px solid blueviolet;
-    background-color: darkgray;
     padding: 10px 40px;
-    flex: 0 1 auto;
     border-radius: 25px;
     margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    flex: 0 1 auto;
+    border: 5px solid blueviolet;
+    background-color: darkgray;
+}
+
+/*---ID SELECTOR ELEMENT STYLING---*/
+
+#logo, #wide-image {
+    border: unset;
+    border-radius: unset;
+}
+
+#wide-image {
+    width: 426px;
+    height: 240px;
+}
+
+/*---INDIVIDUAL SECTION STYLING---*/
+
+.one,
+.four,
+.header {
+    justify-content: space-between;
 }
 
 .header {
-    justify-content: space-between;
-    align-items: center;
     margin-top: 24px;
 }
 
 .footer {
     text-align: center;
-    justify-content: center;
 }
 
 .one,
-.four {
-    justify-content: space-between;
-    flex-wrap: wrap;
+.two {
+    min-height: 400px;
 }
 
-.container {
-    flex: 0 1 500px;
+.three,
+.four {
+    min-height: 300px;
 }
 
 .two,
@@ -48,16 +75,22 @@ body {
     flex-direction: column;
 }
 
+/*---SECTION CONTENT STYLING---*/
+
+.container {
+    flex: 0 1 500px;
+}
+
 .user {
-    align-self: flex-end;
+    justify-content: flex-end;
 }
 
 .info-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
-    gap: 32px;
     flex-wrap: wrap;
+    max-width: 750px;
 }
 
 .info {
@@ -65,17 +98,7 @@ body {
     flex: 0 1 150px;
 }
 
-#wide-image {
-    width: 426px;
-    height: 240px;
-    border: unset;
-    border-radius: unset;
-}
-
-#logo {
-    border: unset;
-    border-radius: unset;
-}
+/*---MISCELLANIOUS STYLING---*/
 
 img {
     border-radius: 25px;
@@ -83,11 +106,6 @@ img {
     width: 150px;
     height: auto;
 }
-
-/**img {
-    width: 150px;
-    height: 150px;
-}**/
 
 ul {
     display: flex;
