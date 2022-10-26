@@ -27,8 +27,10 @@ body {
     justify-content: center;
     align-items: center;
     flex: 0 1 auto;
-    border: 5px solid blueviolet;
-    background-color: darkgray;
+    border: 5px solid white;
+    background-image: url(./images/carbon-background.jpg);
+    background-size: cover;
+    background-color: black;
 }
 
 /*---ID SELECTOR ELEMENT STYLING---*/
@@ -41,6 +43,14 @@ body {
 #wide-image {
     width: 426px;
     height: 240px;
+}
+
+#borderless {
+    border: unset;
+}
+
+#container {
+    margin: 16px;
 }
 
 /*---INDIVIDUAL SECTION STYLING---*/
@@ -94,8 +104,7 @@ body {
     justify-content: space-around;
     height: 150px;
     border-radius: 25px;
-    border: 8px solid darkcyan;
-    background-color: darkcyan;
+    background-color: black;
 }
 
 .info-container {
@@ -111,19 +120,42 @@ body {
     flex-basis: 150px;
 }
 
+.review {
+    font-size: 26px;
+    font-style: italic;
+}
+
 .user {
+    font-size: 22px;
+    font-weight: bold;
     text-align: right;
 }
 
 .title {
-    align-self: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 4px;
 }
+
+.short .title {
+    font-size: 32px;    
+    align-self: center;
+    margin-bottom: 16px;
+}
+
+.long .container .title {
+    font-size: 48px;
+} 
 
 /*---MISCELLANIOUS STYLING---*/
 
+div, a, button {
+    color: white;
+}
+
 img {
     border-radius: 25px;
-    border: 8px solid blueviolet;
+    border: 8px solid white;
     width: 150px;
     height: auto;
 }
@@ -139,4 +171,16 @@ li {
 
 a {
     text-decoration: none;
+}
+
+button {
+    border-radius: 12px;
+    border: 5px solid white;
+    font-family: 'Exo 2';
+    font-size: 22px;
+    font-style: italic;
+    font-weight: bolder;
+    padding: 10px 32px;
+    margin: 8px 0px;
+    background-color: black;
 }
